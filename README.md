@@ -1,5 +1,7 @@
 # aspect_ratio
 
+[![Build Status](https://travis-ci.org/envato/aspect_ratio.svg?branch=master)](https://travis-ci.org/envato/aspect_ratio)
+
 Image aspect ratio utilities.
 
 The Ruby port of [node-aspectratio](https://www.npmjs.com/package/aspectratio) npm module. 
