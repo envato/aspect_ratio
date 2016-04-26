@@ -1,3 +1,9 @@
 language: ruby
 script:
   - ruby test/aspect_ratio_test.rb
+rvm:
+  - 2.2.4
+  - 2.3.0
+  - jruby-9.0.5.0
+  - jruby-head
+  - ruby-head
