@@ -9,4 +9,8 @@ Gem::Specification.new do |s|
   s.files       = ['lib/aspect_ratio.rb']
   s.homepage    = 'http://github.com/envato/aspect_ratio'
   s.license     = 'MIT'
+
+  s.require_paths = ['lib']
+  s.required_ruby_version = '>= 2.2.0'
+  s.test_files    = spec.files.grep(%r{^(test)/})
 end
