@@ -1,0 +1,3 @@
+language: ruby
+script:
+  - ruby test/aspect_ratio_test.rb
