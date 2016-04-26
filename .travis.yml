@@ -1,6 +1,8 @@
 language: ruby
+sudo: false
+install: true
 script:
-  - ruby test/aspect_ratio_test.rb
+  - ruby ./test/aspect_ratio_test.rb
 rvm:
   - 2.2.4
   - 2.3.0
