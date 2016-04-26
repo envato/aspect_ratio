@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = 'aspect_ratio'
-  s.version     = '1.0.0'
+  s.version     = '1.0.1'
   s.date        = '2016-04-26'
   s.summary     = 'Image aspect ratio calculation utility'
   s.description = 'Image aspect ratio calculation utility'
@@ -14,8 +14,8 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.require_paths = ['lib']
-  s.required_ruby_version = '>= 2.2.0'
+  s.required_ruby_version = '>= 2.1.0'
   s.test_files    = s.files.grep(%r{^(test)/})
 
-  s.add_development_dependency 'minitest',          '~> 5'
+  s.add_development_dependency 'minitest', '~> 5'
 end
