@@ -1,3 +1,6 @@
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
 Gem::Specification.new do |s|
   s.name        = 'aspect_ratio'
   s.version     = '1.0.0'
@@ -13,4 +16,6 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.required_ruby_version = '>= 2.2.0'
   s.test_files    = spec.files.grep(%r{^(test)/})
+
+  s.add_development_dependency 'minitest',          '~> 5'
 end
