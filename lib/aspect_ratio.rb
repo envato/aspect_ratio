@@ -1,11 +1,13 @@
 require 'bigdecimal'
 
 module AspectRatio
-  def self.resize(x, y, x_max = nil, y_max = nil)
+  def self.resize(x, y, x_max = nil, y_max = nil, enlarge = true)
     x = BigDecimal(x)
     y = BigDecimal(y)
 
     if x_max && y_max
+      return [x, y] if !enlarge && x <= x_max && y <= y_max
+
       # Maximum values of height and width given, aspect ratio preserved.
       if y > x
         return [(y_max * x / y).round, y_max]
@@ -13,9 +15,13 @@ module AspectRatio
         return [x_max, (x_max * y / x).round]
       end
     elsif x_max
+      return [x, y] if !enlarge && x <= x_max
+
       # Width given, height automagically selected to preserve aspect ratio.
       return [x_max, (x_max * y / x).round]
     else
+      return [x, y] if !enlarge && y <= y_max
+
       # Height given, width automagically selected to preserve aspect ratio.
       return [(y_max * x / y).round, y_max]
     end
