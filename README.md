@@ -69,7 +69,7 @@ AspectRatio.crop(2048, 768, '4:3');
 
 ![Crop with fixed ratio](./aspect.png)
 
-### resize(**integer** `x`, **integer** `y`, **integer** `maxX`, **integer** `maxY`)
+### resize(**integer** `x`, **integer** `y`, **integer** `maxX`, **integer** `maxY`, **boolean** `enlarge`)
 
 Get resized height and width of an image while perserving the aspect ratio of
 the image.
@@ -78,6 +78,7 @@ the image.
 * **integer** `y` - original image height
 * **integer** `maxX` - max image width
 * **integer** `maxY` - max image height
+* **boolean** `enlarge` - enlarge when original is smaller than the max - default true
 
 ### Return
 
@@ -85,5 +86,13 @@ Returns an `Array` of the resized `x` and `y` values:
 
 * **integer** `x` - resized image width
 * **integer** `y` - resized image height
+
+#### Example
+
+```ruby
+require 'aspect_ratio'
+AspectRatio.resize(2048, 768, 640, 640);
+// [640, 240]
+```
 
 ## [MIT License](./LICENSE)
