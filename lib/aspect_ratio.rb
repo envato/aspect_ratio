@@ -6,7 +6,7 @@ module AspectRatio
     y = BigDecimal(y)
 
     if x_max && y_max
-      return [x, y] if !enlarge && x <= x_max && y <= y_max
+      return [x.to_i, y.to_i] if !enlarge && x <= x_max && y <= y_max
 
       # Maximum values of height and width given, aspect ratio preserved.
       if y > x
@@ -15,12 +15,12 @@ module AspectRatio
         return [x_max, (x_max * y / x).round]
       end
     elsif x_max
-      return [x, y] if !enlarge && x <= x_max
+      return [x.to_i, y.to_i] if !enlarge && x <= x_max
 
       # Width given, height automagically selected to preserve aspect ratio.
       return [x_max, (x_max * y / x).round]
     else
-      return [x, y] if !enlarge && y <= y_max
+      return [x.to_i, y.to_i] if !enlarge && y <= y_max
 
       # Height given, width automagically selected to preserve aspect ratio.
       return [(y_max * x / y).round, y_max]
