@@ -19,6 +19,13 @@ describe AspectRatio do
         bounds = AspectRatio.resize(vertical.fetch(:x), vertical.fetch(:y), max_x)
         bounds.must_equal([500, 750])
       end
+
+      describe('when enlarge is false') do
+        it('returns the original') do
+          bounds = AspectRatio.resize(200, 300, max_x, nil, false)
+          bounds.must_equal([200, 300])
+        end
+      end
     end
 
     describe('max_y only') do
@@ -30,6 +37,13 @@ describe AspectRatio do
       it('returns bounds for vertical image') do
         bounds = AspectRatio.resize(vertical.fetch(:x), vertical.fetch(:y), nil, max_y)
         bounds.must_equal([333, 500])
+      end
+
+      describe('when enlarge is false') do
+        it('returns the original') do
+          bounds = AspectRatio.resize(200, 300, nil, max_y, false)
+          bounds.must_equal([200, 300])
+        end
       end
     end
 
@@ -47,6 +61,13 @@ describe AspectRatio do
       it('properly rounds all edges') do
         bounds = AspectRatio.resize(800, 534, 500, 500)
         bounds.must_equal([500, 334])
+      end
+
+      describe('when enlarge is false') do
+        it('returns the original') do
+          bounds = AspectRatio.resize(200, 300, max_x, max_y, false)
+          bounds.must_equal([200, 300])
+        end
       end
     end
   end
