@@ -6,6 +6,5 @@ before_script:
 script:
   - ruby ./test/aspect_ratio_test.rb
 rvm:
-  - 2.1
   - 2.2
   - 2.3
