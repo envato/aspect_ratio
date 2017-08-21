@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.require_paths = ['lib']
-  s.required_ruby_version = '>= 2.1.0'
+  s.required_ruby_version = '>= 2.2.0'
   s.test_files    = s.files.grep(%r{^(test)/})
 
   s.add_development_dependency 'minitest', '~> 5'
