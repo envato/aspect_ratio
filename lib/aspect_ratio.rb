@@ -4,6 +4,8 @@ module AspectRatio
   def self.resize(x, y, x_max = nil, y_max = nil, enlarge = true)
     x = BigDecimal(x)
     y = BigDecimal(y)
+    x_max = BigDecimal(x_max) if x_max
+    y_max = BigDecimal(y_max) if y_max
 
     if x_max && y_max
       return [x.to_i, y.to_i] if !enlarge && x <= x_max && y <= y_max
