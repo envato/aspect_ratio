@@ -55,22 +55,22 @@ module AspectRatio
       end
     end
 
-    Δx = ((x - xʹ) / 2).to_f.floor
-    Δy = ((y - yʹ) / 2).to_f.floor
+    δx = ((x - xʹ) / 2).to_f.floor
+    δy = ((y - yʹ) / 2).to_f.floor
 
     if (vertical || rotate) && !(vertical && rotate)
       [
-        Δy,         # crop top left x
-        Δx,         # crop top left y
-        y - Δy * 2, # crop width
-        x - Δx * 2  # crop height
+        δy,         # crop top left x
+        δx,         # crop top left y
+        y - δy * 2, # crop width
+        x - δx * 2  # crop height
       ]
     else
       [
-        Δx.to_f,    # crop top left x
-        Δy,         # crop top left y
-        x - Δx * 2, # crop width
-        y - Δy * 2  # crop height
+        δx.to_f,    # crop top left x
+        δy,         # crop top left y
+        x - δx * 2, # crop width
+        y - δy * 2  # crop height
       ]
     end
   end
