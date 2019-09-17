@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = 'aspect_ratio'
-  s.version     = '1.0.2'
+  s.version     = '1.0.3'
   s.date        = '2016-04-26'
   s.summary     = 'Image aspect ratio calculation utility'
   s.description = 'Image aspect ratio calculation utility'
