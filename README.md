@@ -1,6 +1,9 @@
 # aspect_ratio
 
-[![Build Status](https://travis-ci.org/envato/aspect_ratio.svg?branch=master)](https://travis-ci.org/envato/aspect_ratio)
+[![License MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/envato/aspect_ratio/blob/main/LICENSE)
+[![Gem Version](https://img.shields.io/gem/v/aspect_ratio.svg?maxAge=2592000)](https://rubygems.org/gems/aspect_ratio)
+[![Gem Downloads](https://img.shields.io/gem/dt/aspect_ratio.svg?maxAge=2592000)](https://rubygems.org/gems/aspect_ratio)
+[![Build Status](https://github.com/envato/aspect_ratio/workflows/tests/badge.svg?branch=main)](https://github.com/envato/aspect_ratio/actions?query=branch%3Amain+workflow%3Atests)
 
 Image aspect ratio utilities.
 
