@@ -1,6 +1,6 @@
 # aspect_ratio
 
-[![Build Status](https://travis-ci.org/envato/aspect_ratio.svg?branch=master)](https://travis-ci.org/envato/aspect_ratio)
+[![Build Status](https://github.com/envato/aspect_ratio/workflows/tests/badge.svg?branch=main)](https://github.com/envato/aspect_ratio/actions?query=branch%3Amain+workflow%3Atests)
 
 Image aspect ratio utilities.
 
